@@ -1,0 +1,2 @@
+# IgnacyLukasiewiczProject
+School homework :)
