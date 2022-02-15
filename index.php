@@ -3,6 +3,7 @@ giveHead('Strona Główna');
 ?>
 
 
+
 <?php 
 include_once('footer.html')
 ?>

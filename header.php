@@ -22,7 +22,6 @@ echo '<!DOCTYPE html>
             </svg>
           </a>
         </li>
-        <!-- class="fa-secondary" stroke="currentColor" fill="currentColor" -->
         <li class="nav-item">
           <a href="index.php" class="nav-link">
             <svg
@@ -128,6 +127,6 @@ echo '<!DOCTYPE html>
           </a>
         </li>
       </ul>
-    </nav><main>
-    <div class="headerSpacing"></div>';
+    </nav><div class="headerSpacing"></div><main>
+    ';
 }
