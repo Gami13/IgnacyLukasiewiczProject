@@ -2,9 +2,7 @@
 giveHead('Strona Główna');
 ?>
 
-    <main>
-      <div class="headerSpacing"></div>
-    </main>
-    <footer> </footer>
-  </body>
-</html>
+
+<?php 
+include_once('footer.php')
+?>

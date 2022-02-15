@@ -128,5 +128,6 @@ echo '<!DOCTYPE html>
           </a>
         </li>
       </ul>
-    </nav>';
+    </nav><main>
+    <div class="headerSpacing"></div>';
 }
