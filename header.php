@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+<?php
+
+function giveHead($title)
+{
+echo '<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ignacy Łukasiewicz</title>
+    <title>'.$title.'</title>
     <link rel="stylesheet" href="css.css" />
   </head>
 
@@ -12,7 +16,7 @@
     <nav class="navbar">
       <ul class="navbar-nav">
         <li class="logo">
-          <a href="#" class="nav-link">
+          <a href="index.php" class="nav-link">
             <span class="link-text logo-text">Menu</span>
             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"> <g class="fa-group"> <path fill="currentColor" d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z" class="fa-secondary" ></path><path fill="currentColor" d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z" class="fa-primary" ></path> </g> 
             </svg>
@@ -20,7 +24,7 @@
         </li>
         <!-- class="fa-secondary" stroke="currentColor" fill="currentColor" -->
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="index.php" class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -36,12 +40,12 @@
                 d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
               />
             </svg>
-            <span class="link-text">Menu Główne</span>
+            <span class="link-text">Strona Główna</span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="life.php" class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -83,7 +87,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="gallery.php" class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -124,11 +128,5 @@
           </a>
         </li>
       </ul>
-    </nav>
-
-    <main>
-      <div class="headerSpacing"></div>
-    </main>
-    <footer> </footer>
-  </body>
-</html>
+    </nav>';
+}
