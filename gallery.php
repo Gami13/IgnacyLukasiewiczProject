@@ -5,5 +5,5 @@ giveHead('Galeria Zdjęć'); ?>
 
 
 <?php 
-include_once('footer.php')
+include_once('footer.html')
 ?>
