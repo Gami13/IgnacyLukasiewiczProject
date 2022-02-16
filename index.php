@@ -1,5 +1,5 @@
 <?php include_once('header.php');
-giveHead('Strona Główna');
+giveHead('Główna');
 ?>
 
 
