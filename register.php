@@ -93,7 +93,7 @@ if (isset($_POST['username']))
         $email = $_POST['email'];
         $password = $_POST['password'];
         $salt = base64_encode(random_bytes(4));
-        $pepper = "2amogus1";
+        $pepper = "7u613W0up3";
         $password = $salt . $password . $pepper;
         $token = base64_encode(random_bytes(189));
         $password = password_hash($password, PASSWORD_DEFAULT);

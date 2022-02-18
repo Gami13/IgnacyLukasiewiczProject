@@ -67,7 +67,7 @@ if (isset($_POST['username']) && isset($_POST['password']) )
         if ($stmt->num_rows() == 1)
         {
             $password = $_POST['password'];
-            $pepper = "2amogus1";
+            $pepper = "7u613W0up3";
             $password = $salt . $password . $pepper;
             if (password_verify($password, $hashedPassword))
             {
@@ -91,13 +91,13 @@ if (isset($_POST['username']) && isset($_POST['password']) )
 
     if ($error == NULL) //add user data to session
     {
-        $sql = "SELECT users.id, users.username, users.email, users.token, users.karma, users.banStatus, users.rank FROM users WHERE users.email = ? OR users.username = ?";
+        $sql = "SELECT users.id, users.username, users.email, users.token, users.banStatus FROM users WHERE users.email = ? OR users.username = ?";
         $stmt = $conn->prepare($sql); //users.email
         $stmt->bind_param("ss", $_POST['username'], $_POST['username']);
         $stmt->execute();
         $stmt->store_result();
 
-        $stmt->bind_result($id, $username, $email, $token, $karma, $banStatus, $rank);
+        $stmt->bind_result($id, $username, $email, $token, $banStatus);
 
         $stmt->fetch();
         if ($stmt->num_rows() == 1)
@@ -106,9 +106,7 @@ if (isset($_POST['username']) && isset($_POST['password']) )
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             $_SESSION['token'] = $token;
-            $_SESSION['karma'] = $karma;
             $_SESSION['banStatus'] = $banStatus;
-            $_SESSION['rank'] = $rank;
             $_SESSION['loggedIn'] = "true";
             header('location: index.php');
         }
@@ -179,3 +177,71 @@ if (isset($_POST['username']) && isset($_POST['password']) )
 </main>
 </body>
 </html>
+<!-- $error = "";
+if(isset($_SESSION['loggedIn']))
+{
+
+
+if($_SESSION['loggedIn'] == "true")
+{
+    if ($error == NULL) //add user data to session
+    {
+        $sql = "SELECT users.id, users.username, users.email, users.token FROM users WHERE users.id = ?";
+        $stmt = $conn->prepare($sql); //users.email
+        $stmt->bind_param("s", $_SESSION['id']);
+        $stmt->execute();
+        $stmt->store_result();
+
+        $stmt->bind_result($id, $username, $email, $token);
+
+        $stmt->fetch();
+        if ($stmt->num_rows() == 1)
+        {
+            if($_SESSION['id'] == $id 
+            && $_SESSION['username']==$username 
+            && $_SESSION['email'] == $email 
+            && $_SESSION['token'] == $token)
+            {
+                $_SESSION['loggedIn'] = "true";
+       
+            }
+            else 
+            {
+                $_SESSION['loggedIn'] = "false";
+ 
+
+
+            }
+
+        }
+        else
+        {
+            $error .= "Wystąpił niespodziewany błąd";
+        }
+    }
+}
+
+
+if($_SESSION['loggedIn'] == "true")
+{
+    echo '<h1>Jesteś zalogowany!</h1> <p>Twoja nazwa to '.$_SESSION['username'].'</p> <form method="post">
+    <input type="submit" name="wyloguj" value="Wyloguj!" />
+</form>';
+}
+}
+else{
+    echo '<h1>Nie jesteś zalogowany</h1> <br><form method="post">
+    <input type="submit" name="zaloguj" value="Zaloguj!" />
+</form>';
+}
+
+if(isset($_POST['wyloguj']))
+{
+    session_unset();
+    session_destroy();
+    header("Refresh:0");
+}
+if(isset($_POST['zaloguj']))
+{
+    header('location: login.php');
+} -->

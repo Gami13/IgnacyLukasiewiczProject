@@ -65,7 +65,7 @@ echo '<!DOCTYPE html>
         </li>
 
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="quizStart.php" class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
