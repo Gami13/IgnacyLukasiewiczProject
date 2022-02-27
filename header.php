@@ -1,7 +1,8 @@
 <?php
-
+include_once('functions.php');
 function giveHead($title)
 {
+  
 echo '<!DOCTYPE html>
 <html lang="en">
   <head>
