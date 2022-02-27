@@ -127,6 +127,6 @@ echo '<!DOCTYPE html>
           </a>
         </li>
       </ul>
-    </nav><div class="headerSpacing"></div><main>
+    </nav><div class="headerSpacing"></div><main id="main">
     ';
 }
