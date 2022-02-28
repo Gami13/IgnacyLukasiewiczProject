@@ -26,17 +26,20 @@ giveHead('Quiz');
     <div class="summary">
         <div class="header">
             <h1 id="pointTitle">Zdobyłeś 20000 punktów!</h1>
-            <div class="redBar"><p id="percentage">80%</p><div class="greenBar"></div></div>
+            <div class="redBar">
+                <p id="percentage">80%</p>
+                <div class="greenBar"></div>
+            </div>
         </div>
 
         <div class="questions">
-        
+            
         </div>
     </div>
 </div>
 
 <script src="api.js"></script>
 
-<?php 
+<?php
 include_once('footer.html')
 ?>

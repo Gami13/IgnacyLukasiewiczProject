@@ -607,6 +607,7 @@ body{
   align-items: center;
   flex-direction: column;
   overflow-y: scroll;
+  animation-duration: 1s;
 }
 
 .quiz > .summary > .header {
@@ -653,6 +654,7 @@ body{
 }
 
 .quiz > .summary > .questions {
+  padding: 20px;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -661,7 +663,7 @@ body{
   border-style: none;
   min-width: 80%;
   max-width: 60%;
-  min-height: 5rem;
+  min-height: min-content;
 }
 
 .quiz > .summary > .questions > .question {
@@ -672,11 +674,16 @@ body{
   align-items: center;
   flex-direction: column;
   border-style: none;
-  min-width: 100%;
+  width: 100%;
   min-height: 5rem;
   font-weight: bold;
   border-radius: var(--roundedXL);
   background-color: var(--firstColor);
+}
+
+.quiz > .summary > .questions > .question > h1 {
+  font-size: 2.6rem;
+  text-align: center;
 }
 
 .quiz > .summary > .questions > .question > .answerSum {
@@ -708,6 +715,7 @@ body{
 }
 
 .quiz > .summary > .questions > .question > .answerSum > * > p {
+  font-size: 1rem;
   color: var(--darkFontColor);
 }
 
@@ -837,6 +845,16 @@ cursor: pointer;
 }
 
 @keyframes idle { 100% {}}
+
+@keyframes slideFromRight {
+  0% {
+    animation-timing-function: ease-in-out;
+    transform: translate(140vw);
+  }
+  100% {
+    transform: translate(0vw);
+  }
+}
 
 
 

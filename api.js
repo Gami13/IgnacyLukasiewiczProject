@@ -1,7 +1,7 @@
 const question = document.getElementById("question");
 const answers = document.querySelectorAll(".answers > *");
 var currentQuestion = 1;
-var questionNumber = 8;
+var questionNumber = 1;
 var totalScore = 0;
 const alreadyAnswered = [];
 var quizSummary = {};
@@ -250,10 +250,21 @@ function animate(id) {
                 });
             });
         } else {
+            // xmlhttp.onload = function() {
+            //     func(xmlhttp.responseText)
+            // }
+        
+            // xmlhttp.open("POST", "../functions.php");
+            // xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            // xmlhttp.send("points=" + totalScore);
+
             let toShow = document.querySelectorAll(".summary");
             let toHide = document.querySelectorAll(".quiz > .question, .answers");
+
             toShow.forEach(element => {
                 element.style.display = "flex";
+                element.style.animationName = "slideFromRight";
             });
             toHide.forEach(element => {
                 element.style.display = "none";
@@ -271,11 +282,16 @@ function animate(id) {
             });
 
             questionsDiv.forEach(element => {
-                for (let i = 8; i <= 10; i++) {
+                for (let i = 1; i <= 10; i++) {
                     console.log(i);
                     element.insertAdjacentHTML('beforeend', '<div class="question"><h1>' + questions[quizSummary[i]["question"]]["questionTitle"] + '</h1><div class="answerSum"><div id="' + i + '1"><p>' + questions[quizSummary[i]["question"]]["ans1"] + '</p></div><div id="' + i + '2"><p>' + questions[quizSummary[i]["question"]]["ans2"] + '</p></div><div id="' + i + '3"><p>' + questions[quizSummary[i]["question"]]["ans3"] + '</p></div><div id="' + i + '4"><p>' + questions[quizSummary[i]["question"]]["ans4"] + '</p></div></div></div>');
                 }
             });
+
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById(parseInt(quizSummary[i]["userAnswer"]) + (i * 10)).style.backgroundColor = "rgb(210, 50, 40)";
+                document.getElementById(parseInt(questions[quizSummary[i]["question"]]["goodAns"]) + (i * 10)).style.backgroundColor = "rgb(90, 235, 50)";
+            }
         }
     });
 }
