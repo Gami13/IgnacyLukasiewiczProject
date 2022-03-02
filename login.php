@@ -1,22 +1,8 @@
 <?php
 include_once('header.php');
-giveHead('Gra');
 ?>
 <div class="centerContent">
     <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "ignacy";
-        
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-        
-                // Check connection
-                if ($conn->connect_error)
-                {
-                    die("Connection failed: " . $conn->connect_error);
-                }
 
 if (isset($_POST['username']) && isset($_POST['password']) )
 {
@@ -25,7 +11,7 @@ if (isset($_POST['username']) && isset($_POST['password']) )
     $error = "";
     $sql = "SELECT users.id FROM users WHERE users.username = ? OR users.email = ?";
     //SELECT users.id, users.username, users.email, users.password, users.salt, users.token, users.karma, users.banStatus, users.rank, users.creationDate, users.avatar, users.liked, users.followed, users.inGroups FROM users WHERE users.username = ? 
-    $stmt = $conn->prepare($sql); //users.email
+    $stmt = $mysqli->prepare($sql); //users.email
     $stmt->bind_param("ss", $_POST['username'], $_POST['username']);
     $stmt->execute();
     $stmt->store_result();
@@ -37,7 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password']) )
     //$stmt -> fetch();
     if ($stmt->num_rows() == 1)
     {
-        echo "gituwa";
+        ;
     }
     else
     {
@@ -48,7 +34,7 @@ if (isset($_POST['username']) && isset($_POST['password']) )
     if ($error == NULL) //check if passwords match - DONE
     {
         $sql = "SELECT users.password, users.salt FROM users WHERE users.email = ? OR users.username = ?";
-        $stmt = $conn->prepare($sql); //users.email
+        $stmt = $mysqli->prepare($sql); //users.email
         $stmt->bind_param("ss", $_POST['username'], $_POST['username']);
         $stmt->execute();
         $stmt->store_result();
@@ -84,7 +70,7 @@ if (isset($_POST['username']) && isset($_POST['password']) )
     if ($error == NULL) //add user data to session
     {
         $sql = "SELECT users.id, users.username, users.email, users.token, users.banStatus FROM users WHERE users.email = ? OR users.username = ?";
-        $stmt = $conn->prepare($sql); //users.email
+        $stmt = $mysqli->prepare($sql); //users.email
         $stmt->bind_param("ss", $_POST['username'], $_POST['username']);
         $stmt->execute();
         $stmt->store_result();
@@ -178,7 +164,7 @@ if($_SESSION['loggedIn'] == "true")
     if ($error == NULL) //add user data to session
     {
         $sql = "SELECT users.id, users.username, users.email, users.token FROM users WHERE users.id = ?";
-        $stmt = $conn->prepare($sql); //users.email
+        $stmt = $mysqli->prepare($sql); //users.email
         $stmt->bind_param("s", $_SESSION['id']);
         $stmt->execute();
         $stmt->store_result();

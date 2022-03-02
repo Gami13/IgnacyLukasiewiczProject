@@ -1,7 +1,11 @@
 <?php include_once('header.php');
 giveHead('Quiz');
 ?>
-<?php echo'<script>const token = '.$_SESSION["token"].'</script>' ?>
+<?php
+if (!empty($_SESSION["token"])) {
+    echo'<script>const token = '.$_SESSION["token"].'</script>';
+}
+?>
 <script>
 const xmlhttp = new XMLHttpRequest();
 
