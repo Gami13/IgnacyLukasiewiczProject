@@ -275,6 +275,13 @@ function animate(id) {
             let greenBar = document.querySelectorAll(".greenBar");
             let questionsDiv = document.querySelectorAll(".questions");
 
+            const xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onload = function() {console.log(xmlhttp.responseText);}
+            xmlhttp.open("POST", "addQuizRecord.php");
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("points=" + totalScore + "$token=" + '<?php echo $_SESSION["token"] ?>');
+
             pointTitle.innerHTML = "Zdobyłeś " + totalScore + " punktów!";
             percentage.innerHTML = totalScore / 250 + "%";
             greenBar.forEach(element => {

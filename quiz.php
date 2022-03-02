@@ -1,5 +1,13 @@
 <?php include_once('header.php');
+
+if (!isLoggedIn()) {
+    header("Location: login.php");
+}
+
+
 giveHead('Quiz');
+
+
 ?>
 
 <div class="quiz centerContent">

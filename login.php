@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
-    <title>Dooter</title>
-</head>
-<body>
-    <header>    </header>
-    <main class="main centerContent">
+<?php
+include_once('header.php');
+giveHead('Gra');
+?>
+<div class="centerContent">
     <?php
-    session_start();
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
@@ -174,9 +166,8 @@ if (isset($_POST['username']) && isset($_POST['password']) )
     <a href="register.php">Zarejestruj się</a>
 </form>
 
-</main>
-</body>
-</html>
+</div>
+
 <!-- $error = "";
 if(isset($_SESSION['loggedIn']))
 {
@@ -245,3 +236,7 @@ if(isset($_POST['zaloguj']))
 {
     header('location: login.php');
 } -->
+
+<?php
+include_once('footer.html');
+?>
