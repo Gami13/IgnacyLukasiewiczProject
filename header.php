@@ -108,7 +108,7 @@ echo '<!DOCTYPE html>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="map.php" class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

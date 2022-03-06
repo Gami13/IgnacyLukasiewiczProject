@@ -811,6 +811,45 @@ cursor: pointer;
 
 
 }
+.chuj{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.left{
+  width: 33%;
+height: 100%;
+}
+.middle{
+  width: 33%;
+  height: 100%;
+
+}
+.right{
+height: 100%;
+width: 33%;
+
+}
+
+
+
+
+area{
+  background-color: blue;
+}
+
+.mapaPolski{
+  width: 60%;
+  height: auto;
+  aspect-ratio: 1000/948;
+}
+
+.srodkujKurwe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .obrazek:hover span{
   font-size: 2.2rem;
 }

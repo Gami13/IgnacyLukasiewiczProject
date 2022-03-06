@@ -6,13 +6,12 @@ const oilCounter = document.getElementById('oilCounter');
 const currentOilPriceCounter = document.getElementById('currentOilPrice');
 clickBlock.addEventListener('click', click)
 var oil = 0;
-var currentPrice = 10
 var money = 10;
 var wydobycieMultiplier = 1;
 var currentOilPrice = 13.50;
 updateMoney(0);
 updateOilPrice();
-var increaseManualWydobycieAmount = 0;
+
 
 function updateMoney(amount) {
     money += amount;
@@ -25,7 +24,7 @@ function updateOilPrice() {
     if (odds > 55) {
         currentOilPrice *= 1 + Math.floor(Math.random() * 50) / 1000;
         currentOilPriceCounter.innerHTML = currentOilPrice.toFixed(2) + 'zł';
-        document.getElementById('lastPriceUpdate').innerHTML='';
+        document.getElementById('lastPriceUpdate').innerHTML='Wzrosła';
     }
     else if (odds <= 55) {
         currentOilPrice *= 1 - Math.floor(Math.random() * 40) / 1000;
@@ -33,24 +32,30 @@ function updateOilPrice() {
             currentOilPrice = 1;
         }
         currentOilPriceCounter.innerHTML = currentOilPrice.toFixed(2) + 'zł';
-        document.getElementById('lastPriceUpdate').innerHTML='';
+        document.getElementById('lastPriceUpdate').innerHTML='Spadła';
     }
 }
 setInterval(updateOilPrice, 300000)
+
 function click() {
     oil += 0.01 * wydobycieMultiplier;
     oilCounter.innerHTML = oil.toFixed(3) + 'L ropy';
 }
+var increaseManualWydobycieAmount = 0;
 
 function buyIncreaseWydobycie() {
+   let currentPrice = 10;
     if (money >= currentPrice) {
         wydobycieMultiplier += 0.2;
         updateMoney(-currentPrice);
 
-        increaseManualWydobycieAmount++;
-        console.log(increaseManualWydobycieAmount)
+       increaseManualWydobycieAmount++;
         currentPrice = 20 + 6 * increaseManualWydobycieAmount * increaseManualWydobycieAmount;
+        console.log(increaseManualWydobycieAmount + " "+ currentPrice);
         document.getElementById('increaseWydobycie').innerHTML = 'Kup ' + currentPrice.toFixed(0) + 'zł'
+    }
+    else{
+        alert('Nie wystarczajaco pieniedzy')
     }
 }
 function sell(percentage) {

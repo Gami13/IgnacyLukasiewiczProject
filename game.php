@@ -12,9 +12,8 @@ giveHead('Gra');
             Clickajka
         </button>
         <div class="buyMenu">
-            <button id="increaseWydobycie" onclick="buyIncreaseWydobycie()">Zwiększ wydobycie</button>
             <div class="sellMenu">
-                <span class="lastPriceUpdate"> </span>
+                <span id="lastPriceUpdate">k </span>
                 <span class="currentOilPrice" id="currentOilPrice"></span>
                 <button class="sell" onclick="sell(0.1)">10%</button>
                 <button class="sell" onclick="sell(0.25)">25%</button>
@@ -22,6 +21,8 @@ giveHead('Gra');
                 <button class="sell" onclick="sell(1.0)">100%</button>
 
             </div>
+            <button id="increaseWydobycie" onclick="buyIncreaseWydobycie()">Zwiększ wydobycie</button>
+
         </div>
     </div>
 </div>
