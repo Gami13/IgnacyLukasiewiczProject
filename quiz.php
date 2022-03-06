@@ -3,7 +3,9 @@
 if (!isLoggedIn()) {
     header("Location: login.php");
 }
-
+if (!empty($_SESSION["token"])) {
+    echo'<script>const token = "'.$_SESSION["token"].'"</script>';
+}
 
 giveHead('Quiz');
 

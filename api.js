@@ -280,7 +280,7 @@ function animate(id) {
             xmlhttp.onload = function() {console.log(xmlhttp.responseText);}
             xmlhttp.open("POST", "addQuizRecord.php");
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xmlhttp.send("points=" + totalScore + "$token=" + '<?php echo $_SESSION["token"] ?>');
+            xmlhttp.send("points=" + totalScore + "$token=" + token);
 
             pointTitle.innerHTML = "Zdobyłeś " + totalScore + " punktów!";
             percentage.innerHTML = totalScore / 250 + "%";
@@ -290,7 +290,6 @@ function animate(id) {
 
             questionsDiv.forEach(element => {
                 for (let i = 1; i <= 10; i++) {
-                    console.log(i);
                     element.insertAdjacentHTML('beforeend', '<div class="question"><h1>' + questions[quizSummary[i]["question"]]["questionTitle"] + '</h1><div class="answerSum"><div id="' + i + '1"><p>' + questions[quizSummary[i]["question"]]["ans1"] + '</p></div><div id="' + i + '2"><p>' + questions[quizSummary[i]["question"]]["ans2"] + '</p></div><div id="' + i + '3"><p>' + questions[quizSummary[i]["question"]]["ans3"] + '</p></div><div id="' + i + '4"><p>' + questions[quizSummary[i]["question"]]["ans4"] + '</p></div></div></div>');
                 }
             });

@@ -1,7 +1,6 @@
 <?php
 include_once('header.php');
 ?>
-<div class="centerContent">
     <?php
 
 if (isset($_POST['username']) && isset($_POST['password']) )
@@ -112,16 +111,10 @@ if (isset($_POST['username']) && isset($_POST['password']) )
 
 }
 
-
-
-
-
-
-
-
+giveHead("Login")
 
 ?>
-
+<div class="centerContent" style="height: 100vh;">
 
 
 <form method="POST" class="registerForm">

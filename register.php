@@ -1,31 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
-    <title>Dooter</title>
-</head>
-<body>
-    <header>    </header>
-    <main class="main centerContent">
     <?php
-    session_start();
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "ignacy";
-        
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-        
-                // Check connection
-                if ($conn->connect_error)
-                {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-
+    include_once("header.php");
 
 $error = "";
 if (isset($_POST['username']))
@@ -51,7 +25,7 @@ if (isset($_POST['username']))
     {
 
         // prepare and bind
-        $stmt = $conn->prepare("SELECT users.id FROM users WHERE users.username = ? ");//users.email
+        $stmt = $mysqli->prepare("SELECT users.id FROM users WHERE users.username = ? ");//users.email
         $stmt->bind_param("s", $_POST['username']);
         $stmt->execute();
         $stmt -> store_result();
@@ -73,7 +47,7 @@ if (isset($_POST['username']))
     {
 
         // prepare and bind
-        $stmt = $conn->prepare("SELECT users.id FROM users WHERE users.email = ? ");//
+        $stmt = $mysqli->prepare("SELECT users.id FROM users WHERE users.email = ? ");//
         $stmt->bind_param("s", $_POST['email']);
         $stmt->execute();
         $stmt -> store_result();
@@ -100,7 +74,7 @@ if (isset($_POST['username']))
 
         $sql = "INSERT INTO users(`username`, `email`, `password`,`salt`,`token`) VALUES (?, ?, ?, ?, ?)";
         echo $sql;
-        $stmt = $conn->prepare($sql);//users.email
+        $stmt = $mysqli->prepare($sql);//users.email
         $stmt->bind_param("sssss", $username, $email, $password, $salt, $token);
         if ($stmt->execute()){
             echo "SUKCES";
@@ -114,7 +88,9 @@ if (isset($_POST['username']))
     echo $error;
 }
 
+giveHead("Register");
 ?>
+<main class="main centerContent">
 
 <form method="POST" class="registerForm">
     <h1>Zarejestruj się</h1>
