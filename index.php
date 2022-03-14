@@ -1,6 +1,7 @@
 <?php include_once('header.php');
 giveHead('Główna');
-?><h1 class="chuj2" style="position: relative; width: 100%; text-align:center; margin-top:1rem">Ignacy Łukasiewicz</h1>
+?>
+<h1 class="chuj2" style="width: 100%; text-align:center; font-size:5rem; margin-bottom: -2rem; margin-top:1rem">Ignacy Łukasiewicz</h1>
 <div class="chuj">
 
     <section class="mainFragment" >
@@ -13,9 +14,7 @@ giveHead('Główna');
             <span>Quiz</span>
         </div>
     </section>
-    <section class="mainFragment">
-        <img class="mainImage" src="img/img1.jpg">
-    </section>
+ 
     <section class="mainFragment">
         <div class="obrazek mainItem" onclick="window.location.pathname += '/gallery.php'">
             <img src="img/img1.jpg" alt="">

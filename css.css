@@ -822,12 +822,12 @@ overflow-wrap: break-word;
 }
 
 .chuj{
-  margin-top: -7rem;
+  overflow-x: hidden;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 .left{
   width: 33%;
@@ -1033,6 +1033,56 @@ cursor: pointer;
   color: var(--mainAccentColor);
 }
 
+.map {
+  display: flex;
+  flex-direction: row;
+  width: 94vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.map > .menu {
+  display: flex;
+  flex-direction: column;
+}
+
+#map {
+  width: 70vw;
+  height: 95vh;
+}
+
+.map > .menu > .selection {
+  width: 25vw;
+  max-height: 37vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.map > .menu > .selection > h1 {
+  background-color: var(--mainAccentColor);
+  border-style: none;
+  width: 90%;
+  height: 3rem;
+  border-radius: var(--roundedM);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--firstColor);
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.map > .menu > .information {
+  width: 25vw;
+  height: 58vh;
+  text-align: center;
+  font-size: 2rem;
+} 
+
 @keyframes slideToLeft {
   0% {
     animation-timing-function: ease-in-out;
@@ -1073,7 +1123,7 @@ cursor: pointer;
     height: 5rem;
   }
   .mainFragment:last-child>.mainItem:last-child{
-    margin-bottom: 10rem;
+margin-bottom: 10rem;
   }
 .chuj{
   margin: 0px;

@@ -21,7 +21,7 @@ giveHead('Galeria');
 
                 echo '
                 <div id="image'.$row["id"].'" onclick="popUp('.$row["id"].')" class="obrazek">
-                    <img src="'.$row["imageLink"].'" alt="'.$row["title"].'">
+                    <img src="'.$row["imageLink"].'" alt="'.$row["title"].'" lodaing="lazy">
                     <span>'.$row["title"].'</span>
                 </div>
                 ';
