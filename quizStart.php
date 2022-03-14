@@ -67,7 +67,7 @@ function getLeaderboard() {
 }
 ?>
 
-<div class="quizStart centerContent">
+<div class="quizStart">
     <div class="header centerContent">
         <h1>Witaj w quizie o Ignacym Łukasiewiczu!</h1>
         <p>Quiz będzie składać się z dziesięciu losowo dobranych pytań.</p>

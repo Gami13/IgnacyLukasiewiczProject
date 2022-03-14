@@ -486,7 +486,12 @@ body{
 
 
 .quizStart {
-  height: 100vh;
+  height: calc(100vh - 1rem);
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .quizStart > .header > * {
