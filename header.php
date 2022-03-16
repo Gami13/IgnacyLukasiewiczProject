@@ -4,7 +4,7 @@ include_once('functions.php');
 function giveHead($title)
 {
   
-echo '<!DOCTYPE html>
+$head = '<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -138,7 +138,14 @@ echo '<!DOCTYPE html>
             <span class="link-text">Zaloguj się</span>
           </a>
         </li>
-      </ul>
-    </nav><div class="headerSpacing"></div><main id="main">
-    ';
+        '; 
+        if (isLoggedIn()) {
+          $head .= '<li class="nav-item">
+                      <a href="wyloguj.php" class="nav-link">
+                        <span class="link-text" style="text-align: center; width: 85%;">Wyloguj się</span>
+                      </a>
+                    </li>';
+        }
+        $head .= '</ul></nav><div class="headerSpacing"></div><main id="main">';
+      echo $head;
 }

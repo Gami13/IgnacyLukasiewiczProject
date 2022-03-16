@@ -47,26 +47,19 @@ giveHead('Galeria');
 
 
 <script>
-    window.onload = function() {
 
-        let insertable = document.createElement("div");
-        insertable.id = 'fullscreenImage';
-        insertable.classList.add('fullscreenImage');
-        insertable.classList.add('hidden');
+    let insertable = document.createElement("div");
+    insertable.id = 'fullscreenImage';
+    insertable.classList.add('fullscreenImage');
+    insertable.classList.add('hidden');
 
-        document.body.insertBefore(insertable, document.getElementById('main'));
-        document.getElementById("fullscreenImage").addEventListener("click", function(e) {
-            if (this == e.target || e.target == document.getElementById("oneImage")) {
-                /* let a = confirm("Gami to furas")
-                while(!a){
-                    a = confirm("Gami to furas")
-                } */
-                document.getElementById('fullscreenImage').classList.add('hidden');
-            }
-        })
+    document.body.insertBefore(insertable, document.getElementById('main'));
+    document.getElementById("fullscreenImage").addEventListener("click", function(e) {
+        if (this == e.target || e.target == document.getElementById("oneImage")) {
+            document.getElementById('fullscreenImage').classList.add('hidden');
+        }
+    })
 
-
-    };
 
     function popUp(id) {
 

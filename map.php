@@ -1,6 +1,6 @@
 <?php
 include_once('header.php');
-giveHead('Galeria');
+giveHead('Mapa');
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.13.0/css/ol.css" type="text/css">
 <style>

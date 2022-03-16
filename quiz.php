@@ -15,7 +15,7 @@ giveHead('Quiz');
 <div class="quiz centerContent">
     <div class="question centerContent" id="question">
         <h1>Pytanie 1</h1>
-        <p>Gami jest furrasem?</p>
+        <p>Tak?</p>
     </div>
 
     <div class="answers">
