@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2022 at 03:18 PM
+-- Generation Time: Mar 16, 2022 at 01:13 PM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.13
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -56,10 +56,7 @@ INSERT INTO `gallery` (`id`, `title`, `imageLink`) VALUES
 (16, 'Grób Ignacego Łukasiewicza', 'https://upload.wikimedia.org/wikipedia/commons/5/50/Grob_Honoraty_i_Ignacego_%C5%81ukasiewicz.jpg'),
 (17, 'Makieta lampy w Zręcinie', 'https://www.terazkrosno.pl/images/rrrcontent/images/xxls/makieta-lapmy-naftowe-stanela-w-zrecinie_12479_Ae9djf.jpg'),
 (18, 'Tablica na grobie Honoraty', 'https://www.odleglosci.pl/galeria-081324/Tablica-na-grobie-Honoraty-Lukasiewicz.jpg'),
-(19, 'Zespół Szkół nr 1 w Gorlicach', 'https://scontent.fpoz4-1.fna.fbcdn.net/v/t31.18172-8/12970917_1067808246594318_8745342345819755348_o.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=CJIhRnj-pzwAX9EANu-&_nc_ht=scontent.fpoz4-1.fna&oh=00_AT8BV6oC6bRM5Vxr2wohjVuUtijDXFPX3KDgqTIPadbthA&oe=6245D031'),
-(20, 'Prace uczniów ZS1 Gorlice', 'https://scontent.fpoz4-1.fna.fbcdn.net/v/t39.30808-6/274221926_7020327994675617_8938568939546688506_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=0bXHKjGLCKsAX8pbnKd&tn=ibAuvtu4PeP5-PEU&_nc_ht=scontent.fpoz4-1.fna&oh=00_AT-zQFZid_owpoMZIaun-1tkDx66qM-o9xGEVlf199GwAQ&oe=62254B4A'),
-(21, 'Prace uczniów ZS1 Gorlice', 'https://scontent.fpoz4-1.fna.fbcdn.net/v/t39.30808-6/274040339_7020328408008909_6299670449185476369_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=dVsNGxYmJ98AX-ZEqCL&_nc_ht=scontent.fpoz4-1.fna&oh=00_AT8DPuhTv1YZQcSn6e2DkfQwEeXE-SH8AS-94cXorPfRZA&oe=6225A25F'),
-(22, 'Prace uczniów ZS1 Gorlice', 'https://scontent.fpoz4-1.fna.fbcdn.net/v/t39.30808-6/274305947_7020329851342098_3390703434032459734_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=6uifyOPmEDUAX_DfjM3&_nc_ht=scontent.fpoz4-1.fna&oh=00_AT86gGWMy8-HAoa5S5veQ_lodKTtoWeQp8HgpMmx1v2EPg&oe=62265DDF');
+(19, 'Zespół Szkół nr 1 w Gorlicach', 'https://scontent.fpoz4-1.fna.fbcdn.net/v/t31.18172-8/12970917_1067808246594318_8745342345819755348_o.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=CJIhRnj-pzwAX9EANu-&_nc_ht=scontent.fpoz4-1.fna&oh=00_AT8BV6oC6bRM5Vxr2wohjVuUtijDXFPX3KDgqTIPadbthA&oe=6245D031');
 
 -- --------------------------------------------------------
 
