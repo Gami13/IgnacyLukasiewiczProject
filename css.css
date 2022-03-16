@@ -96,12 +96,12 @@ svg {
 
 .mainItem{
   padding: 0px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 .mainItem:hover{
-  margin-top: 4.2rem;
-  margin-bottom: 4.2rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .registerForm > .input {
@@ -821,11 +821,11 @@ overflow-wrap: break-word;
   cursor: pointer;
 }
 
-.chuj{
+.mainWrapper{
   overflow-x: hidden;
   display: flex;
   width: 100%;
-  height: fit-content;
+  height: 100vh;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -851,11 +851,7 @@ area{
   background-color: blue;
 }
 
-.mapaPolski{
-  width: 60%;
-  height: auto;
-  aspect-ratio: 1000/948;
-}
+
 
 .srodkujKurwe{
   display: flex;
@@ -1036,7 +1032,7 @@ cursor: pointer;
 .map {
   display: flex;
   flex-direction: row;
-  width: 94vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -1044,6 +1040,7 @@ cursor: pointer;
 .map > .menu {
   display: flex;
   flex-direction: column;
+  width: calc(100vw - 5rem - 70vw);
 }
 
 #map {
@@ -1052,12 +1049,12 @@ cursor: pointer;
 }
 
 .map > .menu > .selection {
-  width: 25vw;
-  max-height: 37vh;
+  width: 100%;
+  height: fit-content;
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow-y: scroll;
+  justify-content: center;
 }
 
 .map > .menu > .selection > h1 {
@@ -1066,7 +1063,7 @@ cursor: pointer;
   width: 90%;
   height: 3rem;
   border-radius: var(--roundedM);
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: bold;
   color: var(--firstColor);
   transition-duration: 200ms;
@@ -1075,10 +1072,13 @@ cursor: pointer;
   text-align: center;
   margin-top: 1rem;
 }
+.map > .menu > .selection > h1:hover {
+  background-color: var(--secondaryAccentColor);
+}
 
 .map > .menu > .information {
   width: 25vw;
-  height: 58vh;
+  height: fit-content;
   text-align: center;
   font-size: 2rem;
 } 
@@ -1125,10 +1125,31 @@ cursor: pointer;
   .mainFragment:last-child>.mainItem:last-child{
 margin-bottom: 10rem;
   }
-.chuj{
-  margin: 0px;
+
+.map {
+height: fit-content;
+  flex-direction: column;
+
+}
+#map {
+  width: 100%;
+  height: 40vh;
+}
+.life > .lifeMenu {
+display: none;
+}
+.map > .menu > .selection {
+  width: 100%;
+  margin-bottom: 1rem;
+
 }
 
+.map > .menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 6rem;
+}
   .quizStart {
     height: fit-content;
     justify-content: normal;
@@ -1138,6 +1159,11 @@ margin-bottom: 10rem;
   .quizStart > .information {
     flex-direction: column;
   }
+  .map > .menu > .information {
+    width: 100%;
+
+    font-size: 2rem;
+  } 
 
   .quizStart > .information > *:not(:last-child) {
     margin-bottom: 1.5rem;
