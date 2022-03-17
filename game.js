@@ -12,7 +12,10 @@ var currentOilPrice = 13.50;
 updateMoney(0);
 updateOilPrice();
 
-
+/**
+ * 
+ * 
+ */
 function updateMoney(amount) {
     money += amount;
 

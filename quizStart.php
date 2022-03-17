@@ -1,6 +1,11 @@
 <?php include_once('header.php');
 giveHead('Quiz');
 
+/**
+ * Wyświetla próby quizu aktualnie zalogowanego użytkownika
+ * 
+ * @author Frytak aka Furras
+ */
 function getUserAttempts() {
     global $mysqli;
 
@@ -41,6 +46,11 @@ function getUserAttempts() {
 
 }
 
+/**
+ * Wyświetla próby quizu wszystkich użytkowników
+ * 
+ * @author Frytak aka Furras
+ */
 function getLeaderboard() {
     global $mysqli;
 

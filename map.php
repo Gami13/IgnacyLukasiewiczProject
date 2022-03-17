@@ -80,7 +80,7 @@ giveHead('Mapa');
             <h1 onclick="document.getElementById('information').innerHTML='Miejsowość w której Łukasiewicz miał praktyki aptekarskie';flyTo(ol.proj.fromLonLat([22.228779375313906,50.068603034981486]),function(){})">Łańcut</h1>
             <h1 onclick="document.getElementById('information').innerHTML='Tu Łukasiewicz mieszkał z powodu nakazu (rok 1848)';flyTo(ol.proj.fromLonLat([24.030509014443133,49.84097119424592]),function(){})">Lwów</h1>
             <h1 onclick="document.getElementById('information').innerHTML='Miejscowość w której Łukasiewicz uczęszczał na studia farmaceutyczne';flyTo(ol.proj.fromLonLat([19.941922775817805,50.06629710696173]),function(){})">Kraków</h1>
-            <h1 onclick="document.getElementById('information').innerHTML='Miejscowość w której Łukasiewicz uczęszczał na studia farmaceutycznie';flyTo(ol.proj.fromLonLat([16.37758414610083,48.21172485249128]),function(){})">Wiedeń</h1>
+            <h1 onclick="document.getElementById('information').innerHTML='Miejscowość w której Łukasiewicz uczęszczał na studia farmaceutyczne';flyTo(ol.proj.fromLonLat([16.37758414610083,48.21172485249128]),function(){})">Wiedeń</h1>
             <h1 onclick="document.getElementById('information').innerHTML='Tu Łukasiewicz postawił pierwszą uliczną lampę naftową';flyTo(ol.proj.fromLonLat([21.16022800149886,49.654419841496974]),function(){})">Gorlice</h1>
             <h1 onclick="document.getElementById('information').innerHTML='Miejscowość w której Łukasiewicz został pochowany';flyTo(ol.proj.fromLonLat([21.689419203203016,49.67195924521435]),function(){})">Zręcin</h1>
 

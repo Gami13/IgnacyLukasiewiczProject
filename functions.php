@@ -2,6 +2,11 @@
 
 $mysqli = new mysqli("localhost", "root", "", "ignacy");
 
+/**
+ * Sprawdza czy użytkownik jest zalogowany
+ * 
+ * @author Frytak aka Furras
+ */
 function isLoggedIn() {
     global $mysqli;
 
@@ -20,4 +25,4 @@ function isLoggedIn() {
             }
         }
     }
-}
+} 

@@ -1,6 +1,13 @@
 <?php
 session_start();
 include_once('functions.php');
+/**
+ * Dodaje tag head, i header do strony z tytułem pobranym jako argument
+ * 
+ * @param string $title - Pożądany tytuł
+ * 
+ * @author Gami
+ */
 function giveHead($title)
 {
   
