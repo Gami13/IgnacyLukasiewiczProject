@@ -27,7 +27,7 @@ const questions = {
         ans1: "Mieszczanem",
         ans2: "Chłopem",
         ans3: "Szlachcicem",
-        ans4: "Żydem",
+        ans4: "Arystokratą",
         goodAns: 3
     },
     4: {
@@ -127,7 +127,7 @@ const questions = {
         goodAns: 3
     },
     16: {
-        questionTitle: "Jak nazywa się film dokumentalny o Łukasiewiczu który powstał w 2009r?",
+        questionTitle: "Jak nazywa się film dokumentalny o Łukasiewiczu, który powstał w 2009r?",
         ans1: "Gorlice miasto światła",
         ans2: "Nowa era",
         ans3: "Rozjaśnić mrok",
