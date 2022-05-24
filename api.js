@@ -3,6 +3,7 @@ const answers = document.querySelectorAll(".answers > *");
 var currentQuestion = 1;
 var questionNumber = 1;
 var totalScore = 0;
+var randomAnsPos = [1, 2, 3, 4];
 const alreadyAnswered = [];
 var quizSummary = {};
 const questions = {
@@ -171,9 +172,10 @@ const questions = {
 
 currentQuestion = getRandom(Object.keys(questions).length) + 1;
 
+shuffleArray(randomAnsPos);
 for (let i = 1; i <= 4; i++) {
     let answer = document.getElementById(i);
-    answer.innerHTML = "<p>" + questions[currentQuestion]["ans" + i] + "</p>";
+    answer.innerHTML = "<p>" + questions[currentQuestion]["ans" + randomAnsPos[i - 1]] + "</p>";
     answer.style.backgroundColor = "var(--mainAccentColor)";
 }
 
@@ -183,6 +185,15 @@ question.innerHTML = "<h1>Pytanie " + questionNumber + "</h1><p>" + questions[cu
 answers.forEach(answer => {
     answer.addEventListener("click", function() {animate(answer.id)});
 });
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -232,9 +243,12 @@ function animate(id) {
 
     sleep(2200).then(() => {
         if (questionNumber != 10) {
+            
+            shuffleArray(randomAnsPos);
+
             for (let i = 1; i <= 4; i++) {
                 let answer = document.getElementById(i);
-                answer.innerHTML = "<p>" + questions[currentQuestion]["ans" + i] + "</p>";
+                answer.innerHTML = "<p>" + questions[currentQuestion]["ans" + randomAnsPos[i - 1]] + "</p>";
                 answer.style.backgroundColor = "var(--mainAccentColor)";
             }
 
