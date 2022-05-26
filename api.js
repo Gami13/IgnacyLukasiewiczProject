@@ -286,6 +286,46 @@ const questions = {
         ans3: "300",
         ans4: "200",
         goodAns: 4
+    },
+    36: {
+        questionTitle: "Kto z rodziny Łukasiewicza handlował naftą?",
+        ans1: "Mama",
+        ans2: "Tata",
+        ans3: "Dziadek",
+        ans4: "Babcia",
+        goodAns: 4
+    },
+    37: {
+        questionTitle: "Jakim źródłem energii jest ropa naftowa?",
+        ans1: "Odnawialnym",
+        ans2: "Nieodnawialnym",
+        ans3: "Częściowo odnawialnym",
+        ans4: "Mało odnawialnym",
+        goodAns: 2
+    },
+    38: {
+        questionTitle: "Jak potocznie nazywana jest ropa naftowa?",
+        ans1: "Czarne złoto",
+        ans2: "Czazrny diament",
+        ans3: "Płynne złoto",
+        ans4: "Płynny diament",
+        goodAns: 1
+    },
+    39: {
+        questionTitle: "Jaki zapach posiada ropa naftowa?",
+        ans1: "Lekki, niedrażniący",
+        ans2: "Lekki, ładny",
+        ans3: "Ostry, nieprzyjemny",
+        ans4: "Nie posiada zapachu",
+        goodAns: 3
+    },
+    40: {
+        questionTitle: "Co Łukasiewicz otworzył w Bóbrce w celach leczniczych?",
+        ans1: "Zakład kąpielowy jodowo-bromowy",
+        ans2: "Kopalnie dla turystów",
+        ans3: "Szpital oparty na leczeniu ropą naftową",
+        ans4: "Sklep z lampami naftowymi",
+        goodAns: 1
     }
 
     
@@ -296,7 +336,7 @@ currentQuestion = getRandom(Object.keys(questions).length) + 1;
 shuffleArray(randomAnsPos);
 for (let i = 1; i <= 4; i++) {
     let answer = document.getElementById(i);
-    answer.innerHTML = "<p>" + questions[currentQuestion]["ans" + randomAnsPos[i - 1]] + "</p>";
+    answer.innerHTML = "<p>" + questions[currentQuestion]["ans" + i] + "</p>";
     answer.style.backgroundColor = "var(--mainAccentColor)";
 }
 
@@ -369,7 +409,7 @@ function animate(id) {
 
             for (let i = 1; i <= 4; i++) {
                 let answer = document.getElementById(i);
-                answer.innerHTML = "<p>" + questions[currentQuestion]["ans" + randomAnsPos[i - 1]] + "</p>";
+                answer.innerHTML = "<p>" + questions[currentQuestion]["ans" + i] + "</p>";
                 answer.style.backgroundColor = "var(--mainAccentColor)";
             }
 

@@ -6,11 +6,11 @@ include_once('functions.php');
  * 
  * @param string $title - Pożądany tytuł
  * 
- * @author Gami
+ * @author Gami (aka Furas)
  */
 function giveHead($title)
 {
-  
+
 $head = '<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,6 +19,8 @@ $head = '<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>'.$title.'</title>
     <link rel="stylesheet" href="css.css" />
+    <script src="index.js"></script>
+    <script disable-devtool-auto src="https://fastly.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js"></script>
   </head>
 
   <body>
@@ -70,6 +72,15 @@ $head = '<!DOCTYPE html>
               />
             </svg>
             <span class="link-text">Życiorys</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="game.php" class="nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dice-2-fill" viewBox="0 0 16 16">
+          <path class="fa-secondary" stroke="currentColor" fill="currentColor" d="M0 3a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3zm5.5 1a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm6.5 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        </svg>
+            <span class="link-text">Gra</span>
           </a>
         </li>
 

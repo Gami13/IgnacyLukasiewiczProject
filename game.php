@@ -5,7 +5,9 @@ giveHead('Gra');
 
 
 <div class='gameWindow'>
-    <div id="game" class="game">
+    <canvas tabindex="0" width="800" height="600" id="Game"></canvas>
+
+    <!-- <div id="game" class="game">
         <span id="oilCounter">100 ropy</span>
         <span id="moneyCounter">100 ropy</span>
         <button id="clickajka">
@@ -24,11 +26,11 @@ giveHead('Gra');
             <button id="increaseWydobycie" onclick="buyIncreaseWydobycie()">Zwiększ wydobycie</button>
 
         </div>
-    </div>
+    </div> -->
 </div>
-<script src="game.js">
-
-</script>
+<script src="game/matter.min.js"></script>
+        <script src="game/stats.min.js"></script>
+<script type="module" src="game.js"></script>
 
 <?php
 include_once('footer.html')

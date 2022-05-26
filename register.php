@@ -13,7 +13,7 @@ if (isset($_POST['username']))
     {
         $error .= "Podany e-mail jest nie prawidłowy<br>";
     }
-    if (!preg_match( "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/", $_POST['password'],) || !preg_match( "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,64}$/",$_POST['passwordConfirm'],))
+    if (!preg_match( "/^.{6,64}$/", $_POST['password'],) || !preg_match( "/^.{6,64}$/",$_POST['passwordConfirm'],))
     {
         $error .= "Hasła są niepoprawne. Hasło musi składać się z conajmniej 8 i maksymalnie 64 znaków. Musi zawierać conajmniej 1 litere i conajmniej 1 cyfre<br>";
     }
@@ -119,7 +119,7 @@ giveHead("Register");
             </g>
 
         </svg>
-        <input type="password" name="password" placeholder="Hasło" required minlength="8" maxlength="64" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,64}$">
+        <input type="password" name="password" placeholder="Hasło" required minlength="6" maxlength="64" pattern="^.{6,64}$">
     </div>
 
     <div class="input">
@@ -129,7 +129,7 @@ giveHead("Register");
             </g>
 
         </svg>
-        <input type="password" name="passwordConfirm" placeholder="Potwierdź Hasło" minlength="8" maxlength="64" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,64}$">
+        <input type="password" name="passwordConfirm" placeholder="Potwierdź Hasło" minlength="6" maxlength="64" pattern="^.{6,64}$">
     </div>
 
     <input type="submit" value="Zarejestruj">
