@@ -10,10 +10,6 @@ giveHead('Galeria');
     $result = $mysqli->query($sql); //users.email
 
 
-
-
-
-
     if ($result->num_rows != 0)
     {
         while ($row = $result->fetch_assoc())
@@ -21,7 +17,7 @@ giveHead('Galeria');
 
             echo '
                 <div id="image' . $row["id"] . '" onclick="popUp(' . $row["id"] . ')" class="obrazek">
-                    <img src="' . $row["imageLink"] . '" alt="' . $row["title"] . '" lodaing="lazy">
+                    <img src="images/' . $row["id"] . '.jpg" alt="' . $row["title"] . '" lodaing="lazy">
                     <span>' . $row["title"] . '</span>
                 </div>
                 ';

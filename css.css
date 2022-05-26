@@ -22,6 +22,23 @@
   --transition-speedFast: 300ms;
   --shadow: drop-shadow(0px 0px 12px #000);
   gap: 0px;
+  
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: black;
+}
+
+::-webkit-scrollbar
+{
+	width: 0.2rem;
+	background-color: black;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--secondaryColor);
 }
 
 .index {
@@ -1118,7 +1135,59 @@ cursor: pointer;
   .headerSpacing{
     display: none;
   }
+.registerForm {
+  transform: scale(0.6);
+}
+
+.lifeMain {
+  padding-right: 0.1rem !important;
+}
+
+.lifeMain > h1 {
+  font-size: 1.6rem;
+}
+
+.lifeMain > h2 {
+  font-size: 1.6rem !important;
+}
+
+.lifeMain > p {
+  font-size: 1rem !important;
+}
+
+  ::-webkit-scrollbar
+  {
+    height: 0rem;
+  }
+
+  .mainItem{
+    transform: scale(0.8);
+    margin-top: 0.2rem;
+    margin-bottom: 0rem;
+
+  }
+
+  .mainWrapper > h1 {
+    font-size: 3rem !important;
+  }
+
+  .mainItem:hover {
+    margin-top: 0.2rem;
+    margin-bottom: 0rem;
+  }
+
+  .quizStart > .header > h1 {
+    font-size: 2rem !important;
+  }
+
+  .quizStart > .header > p {
+    text-align: center;
+  }
+
   .navbar {
+    margin-bottom: -3px;
+    overflow-y: hidden;
+    overflow-x: scroll;
     bottom: 0;
     width: 100vw;
     height: 5rem;

@@ -2,7 +2,7 @@ const question = document.getElementById("question");
 const answers = document.querySelectorAll(".answers > *");
 var currentQuestion = 1;
 var questionNumber = 1;
-var totalScore = 0;
+var Xdkasodksa = 0;
 var randomAnsPos = [1, 2, 3, 4];
 const alreadyAnswered = [];
 var quizSummary = {};
@@ -153,10 +153,10 @@ const questions = {
     },
     19: {
         questionTitle: "Z kim Łukasiewicz badał skład ropy naftowej?",
-        ans1: "z Janem Zehem",
-        ans2: "z Piotrem Mikolaschem",
-        ans3: "z Józefem Łukasiewiczem",
-        ans4: "z Franciszkiem Antoniewiczem",
+        ans1: "Z Janem Zehem",
+        ans2: "Z Piotrem Mikolaschem",
+        ans3: "Z Józefem Łukasiewiczem",
+        ans4: "Z Franciszkiem Antoniewiczem",
         goodAns: 1
     },
     20: {
@@ -166,7 +166,128 @@ const questions = {
         ans3: "Jerzy",
         ans4: "Józef",
         goodAns: 4
+    },
+    21: {
+        questionTitle: "Jak nazywa się szlak naftowy rozpoczynający się w Gorlicach?",
+        ans1: "Gorlicki szlak naftowy",
+        ans2: "Karpacko Galicyjski Szlak Naftowy",
+        ans3: "Śladami Ignacego Łukasiewicza",
+        ans4: "Małopolski Szlak naftowy",
+        goodAns: 2
+    },
+    22: {
+        questionTitle: "Do czego po raz pierwszy Ignacy Łukasiewicz użył lampy naftowej?",
+        ans1: "Do oświetlenia ulicy",
+        ans2: "Do ogrzewania pomieszczenia",
+        ans3: "Do oświetlenia wystawy w aptece",
+        ans4: "Jako oświetlenia swojej apteki",
+        goodAns: 3
+    },
+    23: {
+        questionTitle: "Gdzie znajdowała się apteka w której Ignacy Łukasiewicz prowadził destylacje ropy?",
+        ans1: "W obecnym Muzeum PTTK im. Ignacego Łukasiewicza w Gorlicach",
+        ans2: "W Gorlickim Ratuszu",
+        ans3: "W obecnym Skansenie Przemysłu Naftowego MAGDALENA w Gorlicach",
+        ans4: "W obecnej Bieckiej aptece Dr.Max ",
+        goodAns: 2
+    },
+    24: {
+        questionTitle: "Jak nazywało się urządzenie do destylacji ropy?",
+        ans1: "Destylator",
+        ans2: "Wentylator",
+        ans3: "Ropownik",
+        ans4: "Alembik",
+        goodAns: 4
+    },
+    25: {
+        questionTitle: "Ktory rok został ogłoszony rokiem Łukasiewicza?",
+        ans1: "1992",
+        ans2: "2023",
+        ans3: "2022",
+        ans4: "1922",
+        goodAns: 3
+    },
+    26: {
+        questionTitle: "Gdzie można obejrzeć orginalne urządzenie do destylacji ropy używany przez Łukasiewicza?",
+        ans1: "W Skansenie Przemysłu Naftowego MAGDALENA w Gorlicach",
+        ans2: "W muzeum Mikolascha POD ZŁOTĄ GWIAZDĄ we Lwowie",
+        ans3: "W muzeum Przemysłu Naftowego i Gazowniczego im. Ignacego Łukasiewicza w Bóbrce",
+        ans4: "W Gorlickim Ratuszu",
+        goodAns: 1
+    },
+    27: {
+        questionTitle: "Z jaką organizacją związał się Ignacy Łukasiewicz?",
+        ans1: "Związkiem Wolnych Polaków",
+        ans2: "Towarzystwem Patriotycznym",
+        ans3: "Związkiem fanów Lampy Naftowej",
+        ans4: "Towarzystwem Demokratycznym Polskim",
+        goodAns: 4
+    },
+    28: {
+        questionTitle: "Jak dziś nazywany jest Ignacy Łukasiewicz?",
+        ans1: "Pionerem nowoczesnego budownictwa",
+        ans2: "Twórcą przemysłu naftowego i rafineryjnego",
+        ans3: "Organizatorem imprez o tematyce lamp naftowych",
+        ans4: "Prekursorem elektrotechniki",
+        goodAns: 2
+    },
+    29: {
+        questionTitle: "Jakie najważniejsze cechy miał wynalazek Łukasiewicza?",
+        ans1: "Dawał wysoką temperaturę, zajmował mało miejsca i wystarczył na długo",
+        ans2: "Był skuteczny przy leczeniu chorób zakaźnych, zwalczał bakterie",
+        ans3: "Był tańszy niż inne surowce wykorzystywane do oświetlenia",
+        ans4: "Produkował substancję wykorzystywane do udoskonalenia chemii",
+        goodAns: 3
+    },
+    30: {
+        questionTitle: "Jakie sektory branż bazują dziś na zapoczątkowanym przez Łukasiewicza procesie chemicznym?",
+        ans1: "Paliwowy i chemiczny",
+        ans2: "Spożywczy i rolny",
+        ans3: "Aptekarski",
+        ans4: "Rozrywkowy",
+        goodAns: 1
+    },
+    31: {
+        questionTitle: "Kim był jeszcze Łukasiewicz?",
+        ans1: "Posłem na Sejm galicyjski IV kadencji",
+        ans2: "Konsulem",
+        ans3: "Przewodniczącym ówczesnych związków zawodowych",
+        ans4: "Delegatem ds.gospodarczyk",
+        goodAns: 1
+    },
+    32: {
+        questionTitle: "Za co Łukasiewicz został oznaczony Orderem Św. Grzegorza i tutułem szambelana?",
+        ans1: "Za budowanie przyparafialnych noclegowni dla bezdomnych ",
+        ans2: "Za obdarowywanie bezdomych potrzebnymi przedmiotami",
+        ans3: "Za działalność charytatywną i wspieranie kościoła",
+        ans4: "Za dokonanie odkrycia wiele znaczącym dla świata",
+        goodAns: 3
+    },
+    33: {
+        questionTitle: "Jak mieszkańcy nazywali drogę na którą Łukasiewicz przeznaczył własne środki?",
+        ans1: "Ulicą Łukasiewicza",
+        ans2: "Drogą ojca lamp naftowych",
+        ans3: "Traktem naftowym",
+        ans4: "Brukowanymi guldenami Łukasiewicza",
+        goodAns: 4
+    },
+    34: {
+        questionTitle: "Nad czym początkowo pracował Łukasiewicz?",
+        ans1: "Nad usprawnieniem produkcji spirytusu",
+        ans2: "Nad destylacją ropy naftowej w celu otrzymania leku na choroby skóry",
+        ans3: "Nad maścią stomatologiczną",
+        ans4: "Nad magnetyczną metodą wzbogacenia rud żelaza",
+        goodAns: 2
+    },
+    35: {
+        questionTitle: "Którą rocznicę urodzin Łukasiewicza obchodzmy w tym roku?",
+        ans1: "100",
+        ans2: "50",
+        ans3: "300",
+        ans4: "200",
+        goodAns: 4
     }
+
     
 }
 
@@ -206,7 +327,7 @@ function getRandom(max) {
 function animate(id) {
     if (questions[currentQuestion]["goodAns"] == id) {
         document.getElementById(id).style.backgroundColor = "rgb(90, 235, 50)";
-        totalScore += 2500;
+        Xdkasodksa += 2500;
     } else {
         document.getElementById(questions[currentQuestion]["goodAns"]).style.backgroundColor = "rgb(90, 235, 50)";
         document.getElementById(id).style.backgroundColor = "rgb(210, 50, 40)";
@@ -271,7 +392,7 @@ function animate(id) {
             // xmlhttp.open("POST", "../functions.php");
             // xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-            // xmlhttp.send("points=" + totalScore);
+            // xmlhttp.send("points=" + Xdkasodksa);
 
             let toShow = document.querySelectorAll(".summary");
             let toHide = document.querySelectorAll(".quiz > .question, .answers");
@@ -294,12 +415,12 @@ function animate(id) {
             xmlhttp.onload = function() {console.log(xmlhttp.responseText);}
             xmlhttp.open("POST", "addQuizRecord.php");
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xmlhttp.send("points=" + totalScore + "$token=" + token);
+            xmlhttp.send("points=" + Xdkasodksa + "$token=" + token);
 
-            pointTitle.innerHTML = "Zdobyłeś " + totalScore + " punktów!";
-            percentage.innerHTML = totalScore / 250 + "%";
+            pointTitle.innerHTML = "Zdobyłeś " + Xdkasodksa + " punktów!";
+            percentage.innerHTML = Xdkasodksa / 250 + "%";
             greenBar.forEach(element => {
-                element.style.width = totalScore / 250 + "%";
+                element.style.width = Xdkasodksa / 250 + "%";
             });
 
             questionsDiv.forEach(element => {
